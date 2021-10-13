@@ -1,0 +1,41 @@
+{
+    "color":{
+    "white":"#FFFFFF",
+    "pages":{
+        "intro":"#FDE833",
+        "who":"#1546BF",
+        "what":"#FB6542",
+        "work":"#621BC1"
+        }
+    },
+    "navItems":[
+        {
+            "id":1,
+            "name":"intro",
+            "href":"/",
+            "component":"home"
+        },
+        {
+            "id":2,
+            "name":"who",
+            "href":"/who",
+            "component":"who"
+        },
+        {
+            
+            "id":3,
+            "name":"work",
+            "href":"/work",
+            "component":"work"
+        },
+        {
+            
+            "id":4,
+            "name":"what",
+            "href":"/what",
+            "component":"what"
+        }
+    ]
+
+
+}

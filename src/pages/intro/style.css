@@ -1,0 +1,83 @@
+/*.intro{
+    background-color:#FDE833;
+}*/
+.intro .recentWork , .intro .recentWork .images{
+    position: relative;
+}
+
+.intro .recentWork::after{
+    position: absolute;
+}
+.intro .hero .hero-content h2{
+    color: white;
+    font-size: 10vw;
+    font-family: 'qua';
+    text-transform: uppercase;
+}
+.intro .recentWork .text button{
+    background-color: transparent;
+    cursor: pointer;    
+}
+.intro .recentWork .text ,.intro .recentWork .text button{
+    text-transform: uppercase;
+}
+.intro .recentWork{
+    height: 100vh;
+}
+
+.intro .recentWork .holder{
+    z-index: 3;
+    width: 30%;
+}
+
+.intro .recentWork .images{
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-66%) rotate(15deg);
+}
+.intro .recentWork .images img{
+    width: 20vw;
+    height: auto;
+    visibility: hidden;
+}
+.intro .recentWork .text{
+    font-weight: normal;
+    text-align: center;
+}
+.intro .recentWork .text button{
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    height: 4rem;
+    border: 2px solid white;
+    
+}
+.intro .recentWork .text h2{
+    font-size:4rem;
+    color: white;
+}
+@media(max-width:762px){
+    .intro .recentWork .images{
+        transform: translate(-50%,-50%) rotate(0);
+        width: 100%;
+    }
+    .intro .recentWork .images img{
+        width: 30vw;
+        height: auto;
+        visibility: hidden;
+    }
+    .intro .recentWork .text button{
+        width: 40vw;
+        font-size: 3.5vw;
+        height: 5vh;
+    }
+    .intro .recentWork .text h2{
+        font-size:8vw;
+    }
+}

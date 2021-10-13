@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@font-face {
+  font-family: "Qualified";
+  src: url('./fonts/Qualified.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%; 
+}
+.container{
+  max-width:90%;
+  margin: auto;
+  /*height: 100%;*/
+  
+}
+.container-h100{
+  max-width:90%;
+  margin: auto;
+  height: 100%;
+  
+}
+.holder{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  min-width: 45%;
+  min-height: 20%;
+}
+.holder2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.transiting{
+  overflow-y:hidden;
+}
+/*#root, .container , body , html{
+  pointer-events: none;
+}*/
+@media (max-width:768px){
+  .holder{
+    min-width: 95%;
+  }
+  
+}

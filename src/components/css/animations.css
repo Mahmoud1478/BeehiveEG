@@ -1,0 +1,138 @@
+@keyframes slide-down {
+    0% {
+        transform: translateY(-200%);
+        -moz-transform: translateY(-200%);
+        -webkit-transform: translateY(-200%);
+        -ms-transform: translateY(-200%);
+        -o-transform: translateY(-200%);
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    } 
+}
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-200%);
+        -moz-transform: translateY(-200%);
+        -webkit-transform: translateY(-200%);
+        -ms-transform: translateY(-200%);
+        -o-transform: translateY(-200%);
+        opacity: 0;
+        visibility: hidden;
+    } 
+}
+@keyframes fade-in {
+    0% {
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    } 
+}
+@keyframes up-down {
+    0%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        
+    }
+    80%{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);  
+    }
+    100%{
+        visibility: visible;
+        opacity: 0;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+}
+@keyframes slide-right {
+    0%{
+        visibility: hidden;
+        transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%); 
+        opacity: 0; 
+    }
+    100%{
+        visibility: visible;
+        transform: translateX(0);
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+.slide-right{
+    animation: slide-right .5s ease-in-out  forwards;
+    -webkit-animation: slide-right .5s ease-in-out  forwards;
+    -moz-animation: slide-right .5s ease-in-out  forwards;
+    -ms-animation: slide-right .5s ease-in-out  forwards;
+    -o-animation: slide-right .5s ease-in-out  forwards;
+}
+.up-down{
+    animation: up-down 2s ease-out  infinite  ;
+    -webkit-animation: up-down 2s ease-out  infinite  ;
+    -moz-animation: up-down 2s ease-out  infinite  ;
+    -ms-animation: up-down 2s ease-out  infinite  ;
+    -o-animation: up-down 2s ease-out  infinite  ;
+}
+.slide-up{
+    animation: slide-up .5s ease-in-out  forwards;
+    -webkit-animation: slide-up .5s ease-in-out  forwards;
+    -moz-animation: slide-up .5s ease-in-out  forwards;
+    -ms-animation: slide-up .5s ease-in-out  forwards;
+    -o-animation: slide-up .5s ease-in-out  forwards;
+}
+.slide-down{
+    animation: slide-down .5s ease-in-out  forwards;
+    -webkit-animation: slide-down .5s ease-in-out  forwards;
+    -moz-animation: slide-down .5s ease-in-out  forwards;
+    -ms-animation: slide-down .5s ease-in-out  forwards;
+    -o-animation: slide-down .5s ease-in-out  forwards;
+}
+.fade-in{
+    animation: fade-in 1s ease-in-out  forwards;
+    -webkit-animation: fade-in 1s ease-in-out  forwards;
+    -moz-animation: fade-in 1s ease-in-out  forwards;
+    -ms-animation: fade-in 1s ease-in-out  forwards;
+    -o-animation: fade-in 1s ease-in-out  forwards;
+}

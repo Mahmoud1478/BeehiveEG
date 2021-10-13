@@ -1,0 +1,24 @@
+.slider{
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: -1;
+    & .silder_item{
+        width: 100vw;
+        height: 100%;
+        position: relative;
+    }
+    & .stage{
+        transform: translateX(0);
+        width: 400vw;
+        height: 100Vh;
+        display: flex;
+        transition: transform 1.5s cubic-bezier(0.62, 0.02, 0.34, 1);
+    }
+}
+.App{
+    position: relative;
+}
