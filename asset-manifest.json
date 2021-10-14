@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/BeehiveEG/static/css/main.7efa1aea.chunk.css",
-    "main.js": "/BeehiveEG/static/js/main.fe771b4a.chunk.js",
-    "main.js.map": "/BeehiveEG/static/js/main.fe771b4a.chunk.js.map",
+    "main.js": "/BeehiveEG/static/js/main.6b1c6ced.chunk.js",
+    "main.js.map": "/BeehiveEG/static/js/main.6b1c6ced.chunk.js.map",
     "runtime-main.js": "/BeehiveEG/static/js/runtime-main.2702bf38.js",
     "runtime-main.js.map": "/BeehiveEG/static/js/runtime-main.2702bf38.js.map",
     "static/js/2.80896b12.chunk.js": "/BeehiveEG/static/js/2.80896b12.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.2702bf38.js",
     "static/js/2.80896b12.chunk.js",
     "static/css/main.7efa1aea.chunk.css",
-    "static/js/main.fe771b4a.chunk.js"
+    "static/js/main.6b1c6ced.chunk.js"
   ]
 }
