@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "./static/css/main.13a7979e.chunk.css",
-    "main.js": "./static/js/main.fe771b4a.chunk.js",
-    "main.js.map": "./static/js/main.fe771b4a.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.bdaef0a9.js",
-    "runtime-main.js.map": "./static/js/runtime-main.bdaef0a9.js.map",
-    "static/js/2.fbf247e8.chunk.js": "./static/js/2.fbf247e8.chunk.js",
-    "static/js/2.fbf247e8.chunk.js.map": "./static/js/2.fbf247e8.chunk.js.map",
-    "index.html": "./index.html",
-    "static/css/main.13a7979e.chunk.css.map": "./static/css/main.13a7979e.chunk.css.map",
-    "static/js/2.fbf247e8.chunk.js.LICENSE.txt": "./static/js/2.fbf247e8.chunk.js.LICENSE.txt",
-    "static/media/index.css": "./static/media/Qualified.d0f48903.ttf"
+    "main.css": "/BeehiveEG/static/css/main.7efa1aea.chunk.css",
+    "main.js": "/BeehiveEG/static/js/main.fe771b4a.chunk.js",
+    "main.js.map": "/BeehiveEG/static/js/main.fe771b4a.chunk.js.map",
+    "runtime-main.js": "/BeehiveEG/static/js/runtime-main.2702bf38.js",
+    "runtime-main.js.map": "/BeehiveEG/static/js/runtime-main.2702bf38.js.map",
+    "static/js/2.80896b12.chunk.js": "/BeehiveEG/static/js/2.80896b12.chunk.js",
+    "static/js/2.80896b12.chunk.js.map": "/BeehiveEG/static/js/2.80896b12.chunk.js.map",
+    "index.html": "/BeehiveEG/index.html",
+    "static/css/main.7efa1aea.chunk.css.map": "/BeehiveEG/static/css/main.7efa1aea.chunk.css.map",
+    "static/js/2.80896b12.chunk.js.LICENSE.txt": "/BeehiveEG/static/js/2.80896b12.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/BeehiveEG/static/media/Qualified.d0f48903.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.bdaef0a9.js",
-    "static/js/2.fbf247e8.chunk.js",
-    "static/css/main.13a7979e.chunk.css",
+    "static/js/runtime-main.2702bf38.js",
+    "static/js/2.80896b12.chunk.js",
+    "static/css/main.7efa1aea.chunk.css",
     "static/js/main.fe771b4a.chunk.js"
   ]
 }
