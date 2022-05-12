@@ -5,6 +5,10 @@ export const HeaderSection = styled.header`
     padding: 2rem 0;
     color : ${props=> props.path==="/"?"black":"white"};
     width:100%;
+    position:fixed;
+    top:0;
+    z-index :9999999;
+    background-color: transparent
 `
 export const NavigationBtn = styled(NavLink)`
     text-transform: uppercase;
@@ -45,8 +49,9 @@ export const NavBtn = styled.button`
     text-transform: uppercase;
     border: none;
     outline: none;
-    padding: .2rem;
+    //padding: .2rem;
     color: inherit;
+    width:80px;
     transition:color .1s ease-in ;
     &::after{
         content: "";
@@ -72,7 +77,7 @@ export const MobileNavBtn = styled.button`
     width: 5rem;
     height: 5rem;
     z-index: 3;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -100,6 +105,9 @@ export const MobileNavBtn = styled.button`
         top:${props=>props.active?"50%":"60%"};
         transform:${props=>props.active&&`translate(-50%,-50%) rotate(-45deg);`}
     }
+    @media(max-width:768px){
+        display: flex;
+    }
 `
 export const MobileMenu = styled.div`
     position: fixed; 
@@ -111,7 +119,7 @@ export const MobileMenu = styled.div`
     width:${props=> props.active?"93vw":"0"};
     height:${props=> props.active?"95vh":"0"};
     opacity: ${props=> props.active?"1":"0"};
-    visibility:${props=> props.active?"visible":"hidden"};
+    //visibility:${props=> props.active?"visible":"hidden"};
     overflow: hidden;
     transition: opacity 1s ease;
     &::after{
@@ -123,6 +131,9 @@ export const MobileMenu = styled.div`
         height: 50%;
         background-color:rgba(0, 0, 0, .3);
         clip-path: polygon(100% 100.18%, -0.15% 100%, -0.51% 64.5%, 100% 18.54%);
+    }
+    @media(min-width:768px){
+        display: none;
     }
 `
 export const MobileMenuList = styled.ul`

@@ -4,7 +4,6 @@ import { WhoPage ,Content} from "./style";
 import Pragraph from "../../components/pragraph-section/pragraph-component";
 import pages from "../../configrations/pages";
 import './who-page.style.scss'
-
 const Who =()=> {
     const pageInfo = pages.who;
     const scrollTarget = useRef();

@@ -22,3 +22,16 @@
 .App{
     position: relative;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+// .page-container{
+//     display: grid;
+//     overflow: hidden;
+//     > * {
+//         width: 100%;
+//         height: 100%;
+        
+//     }
+// }

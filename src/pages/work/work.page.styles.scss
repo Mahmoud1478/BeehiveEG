@@ -10,7 +10,10 @@
             height: 100%;
             transition: transform .5s ease-in;
             width: fit-content;
+            transform-origin:  center center ;
+            backface-visibility: hidden;
             margin: 0 auto;
+            will-change :transform;
             & li {
                 position: relative;
                 overflow: hidden;
@@ -35,6 +38,7 @@
                             opacity: 1;
                             transform: translate(-50%,-50%);
                             pointer-events: none;
+                            
                         }
                     }
                 }
@@ -59,4 +63,11 @@
         }
     
     }
+}
+
+.test{
+    text-decoration: none;
+    cursor: pointer;
+    transform-origin: center center;
+    transition: transform .3s ease-out;
 }

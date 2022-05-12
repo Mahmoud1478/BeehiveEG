@@ -15,16 +15,16 @@ class Pragraph extends Component{
         
     }
     componentDidMount(){
-        //console.log(this.props.list);
-        if(this.props.title !== undefined){
-            window.addEventListener("scroll",this.onScrolling)
-        }
-        if(this.props.list !== undefined){
-            this.currentScrollValue = 0
-            this.stopScroll = null
-            window.addEventListener("scroll",this.listOnScrolling)
+        // //console.log(this.props.list);
+        // if(this.props.title !== undefined){
+        //     window.addEventListener("scroll",this.onScrolling)
+        // }
+        // if(this.props.list !== undefined){
+        //     this.currentScrollValue = 0
+        //     this.stopScroll = null
+        //     window.addEventListener("scroll",this.listOnScrolling)
             
-        }
+        // }
     }
     componentWillUnmount(){
         if(this.props.title !== undefined){
@@ -89,7 +89,7 @@ class Pragraph extends Component{
                     </Body>
                 }
                 {this.props.list&&
-                    <ul ref={this.list} style={{ transform: `skewY(${this.state.skewValue}deg)` }}>
+                    <ul ref={this.list} style={{}} id = {this.props.id} >
                     { this.props.list.map(item=>(
                             <li key = {item.key}>
                                 <h2>{item.title}</h2>

@@ -5,7 +5,6 @@ import Pragraph from "../../components/pragraph-section/pragraph-component";
 import pages from "../../configrations/pages";
 import axios from "axios";
 import './what.page.styles.scss'
-
 const What=()=>{
     const pageInfo = pages.what ;
     const scrollTarget = useRef();
@@ -14,7 +13,6 @@ const What=()=>{
     useEffect(()=>{
         async function fetchData(){
             await axios.get("jsons/API_semi.json").then(res =>{
-                console.log(res.data.services);
                 setServices(res.data.services)
             })
         }
@@ -23,7 +21,6 @@ const What=()=>{
     useEffect(()=>{
         async function fetchData(){
             await axios.get("jsons/API_semi.json").then(res =>{
-                console.log(res.data.partners);
                 setPartners(res.data.partners)
             })
         }
