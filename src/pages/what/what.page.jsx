@@ -1,4 +1,4 @@
-import React, {  useRef,useEffect,useState } from "react";
+import React, { useEffect,useState } from "react";
 import Introduction from "../../components/section-intro/intro.component";
 import {WhatPage} from './style'
 import Pragraph from "../../components/pragraph-section/pragraph-component";
@@ -7,7 +7,6 @@ import axios from "axios";
 import './what.page.styles.scss'
 const What=()=>{
     const pageInfo = pages.what ;
-    const scrollTarget = useRef();
     const [services, setServices] = useState([]);
     const [partners, setPartners] = useState([]);
     useEffect(()=>{
@@ -32,9 +31,9 @@ const What=()=>{
                 heading ={pageInfo.Text.heading} 
                 headingColor={pageInfo.Text.headingColor} 
                 btnColor={pageInfo.Text.btnColor}
-                alt={pageInfo.Text.alt} scrollTo={scrollTarget} 
+                alt={pageInfo.Text.alt} scrollTo='#services'
             />
-            <section ref={scrollTarget} style={{position:"relative",height: "100vh"}}>
+            <section id="services" style={{position:"relative",height: "100vh"}}>
                 <div className="container">
                     <div className="holder">
                     <Pragraph 
@@ -44,7 +43,6 @@ const What=()=>{
                         bodyColor = {pageInfo.Text.pragraphSection.bodyColor}
                         smallBody ={pageInfo.Text.pragraphSection.smallBody}
                         smallBodyColor= {pageInfo.Text.pragraphSection.smallBodyColor}
-                        pointer ={scrollTarget}
                         focusOn = {pageInfo.Text.pragraphSection.focusOn}
                         servces={services}
                     />
@@ -62,7 +60,6 @@ const What=()=>{
                         bodyColor = {pageInfo.Text.pragraphSection2.bodyColor}
                         smallBody ={pageInfo.Text.pragraphSection2.smallBody}
                         smallBodyColor= {pageInfo.Text.pragraphSection2.smallBodyColor}
-                        pointer ={scrollTarget}
                         focusOn = {pageInfo.Text.pragraphSection2.focusOn}
                         partners={partners}
                     />

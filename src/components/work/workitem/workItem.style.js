@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const ProjectSectionTitle = styled.h2`
     color:white;
-    font-size : 10rem;
+    font-size : 12rem;
     text-transform: uppercase;
 `
 

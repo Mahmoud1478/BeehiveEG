@@ -48,14 +48,10 @@ export const WorkList = ({workList}) => {
     },[])
     return (
         <>
-            <SectionTitle> Select Projects </SectionTitle>
-            <UnorderedList  >
+            <SectionTitle hoverWidth ="30"> Select Projects </SectionTitle>
+            <UnorderedList style={{ transform: `skewY(${animation.skew}deg) rotateX(${animation.rotate}deg) `}} >
             { workList.map(item=>(
-                    <WorkItem  key={item.key}  title = {item.title} img = {item.img} link = {item.link}   transform={{
-                        transform: `skewY(${animation.skew}deg) rotateX(${animation.rotate}deg) ` ,
-                        //transition: ' cubic-bezier(0.52, 0.01, 0.16, 1)'
-                        //transform: `matrix(${animation.skew},${animation.skew},0 ,1,0,0)`
-                    }}/>
+                    <WorkItem  key={item.key}  title = {item.title} img = {item.img} link = {item.link} />
                 ))}
             </UnorderedList>
         </>

@@ -1,82 +1,27 @@
 
 import React, { Component ,createRef} from 'react'
-import { Body, SmallBody, Title ,PragraphHolder,} from './pragraph-component.style'
+import SectionTitle from '../SectionTitle/SectionTitle'
+import { Body, SmallBody ,PragraphHolder,} from './pragraph-component.style'
 import './pragraph-component.style.scss'
 class Pragraph extends Component{
     constructor(props){
         super(props)
-        this.state = {
-            affterWidth:"5%",
-            skewValue : null
-        }
-        this.onScrolling.bind(this)
-        this.listOnScrolling.bind(this)
         this.list = createRef()
         
     }
     componentDidMount(){
-        // //console.log(this.props.list);
-        // if(this.props.title !== undefined){
-        //     window.addEventListener("scroll",this.onScrolling)
-        // }
-        // if(this.props.list !== undefined){
-        //     this.currentScrollValue = 0
-        //     this.stopScroll = null
-        //     window.addEventListener("scroll",this.listOnScrolling)
-            
-        // }
+
     }
     componentWillUnmount(){
-        if(this.props.title !== undefined){
-            window.removeEventListener("scroll",this.onScrolling)
-        }
-        if(this.props.title !== undefined){
-            window.removeEventListener("scroll",this.listOnScrolling)
-        }
-    }
-    onScrolling = ()=>{
-        const responsive = setTimeout(()=>{
-            if (window.pageYOffset >= this.props.pointer.current.offsetTop -this.props.pointer.current.offsetTop*this.props.focusOn){
-                this.setState({
-                    affterWidth:"20%"
-                })
-            }else{
-                this.setState({
-                    affterWidth:"5%"
-                })
-            }
-        },500)
-        return()=>{
-            clearTimeout(responsive)
-        }
-    }
-    listOnScrolling = ()=>{
-        const timeOut = setTimeout(()=>{
-            if(this.currentScrollValue < window.pageYOffset ){
-                this.setState({skewValue:10})
-            }else if (this.currentScrollValue > window.pageYOffset){
-                this.setState({skewValue:-10})
-            }
-            
-            this.currentScrollValue = window.pageYOffset
-            this.list.current.addEventListener("transitionend",()=>{
-                const stopScroll = setTimeout(()=>{
-                    this.setState({skewValue:0})
-                },100)
-                return()=>{clearTimeout(stopScroll)}
-                
-            })
-        },100)
-        return()=>{clearTimeout(timeOut)}
         
     }
     render(){
         return(
-            <PragraphHolder className='pargraph'>   
+            <PragraphHolder className='pargraph' id={this.props.ID }>   
                 {this.props.title&& 
-                    <Title affterWidth ={this.state.affterWidth} titleColor = {this.props.titleColor} >
+                    <SectionTitle hoverWidth='8' titleColor = {this.props.titleColor} >
                         {this.props.title}
-                    </Title>
+                    </SectionTitle>
                 }
                 {this.props.smallBody&&
                     <SmallBody smallBodyColor ={this.props.smallBodyColor} mobileFontSizeSB = {this.props.mobileFontSizeSB}>

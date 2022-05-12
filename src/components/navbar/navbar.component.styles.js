@@ -13,6 +13,10 @@ export const HeaderSection = styled.header`
 export const NavigationBtn = styled(NavLink)`
     text-transform: uppercase;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:35px;
     font-size: 1.2rem;
     color: inherit;
     transition:color .1s ease-in ;

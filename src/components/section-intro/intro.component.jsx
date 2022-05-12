@@ -48,8 +48,8 @@ class Introduction extends Component{
                             }}
                         />
                     </HeroContent>
-                    <ScrollBtn 
-                        onClick={this.scrollDown} 
+                    <ScrollBtn as={'a'}
+                        href ={this.props.scrollTo}
                         btnColor={this.props.btnColor}
                     >
                         <FontAwesomeIcon icon = {faAngleDoubleDown} size = "1x" className="up-down"/>
