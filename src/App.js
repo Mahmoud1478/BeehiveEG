@@ -13,6 +13,8 @@ import SlideRoutes from 'react-slide-routes'
 
 // import {AnimatePresence , } from "framer-motion";
 import { useLocation  } from 'react-router-dom'  
+import LatestWork from './pages/latestWork/LatestWork'
+import { Project } from './pages/project/Project'
 // import { useContext } from 'react'
 // import { RootContext } from './ContextApi/RootContext'
 // import Animated from './pages/animated'
@@ -24,11 +26,13 @@ const App = ()=>{
     return(
         <div className="App">
             <Navbar/>
-            <SlideRoutes location={location} duration={500} timing="ease-out" pathList={["/","/who", "/work" , "/what"]}>
+            <SlideRoutes location={location} duration={500} timing="ease-out" pathList={["/","/who", "/work" , "/what",'/work/latest']}>
                 <Route exact path="/" component={Intro} />
-                <Route path="/who" component={Who}/>
-                <Route path="/work" component={Work}/>
-                <Route path="/what" component={What}/>
+                <Route exact path="/who" component={Who}/>
+                <Route exact path="/work" component={Work}/>
+                <Route exact path="/what" component={What}/>
+                <Route exact path="/work/latest" component={LatestWork}/>
+                <Route  path="/work/:id" component={Project}/>
             </SlideRoutes>
             {/* <AnimatePresence  exitBeforeEnter= {true}  initial={false} >
                 <Routes location={location} key = {location.pathname}>

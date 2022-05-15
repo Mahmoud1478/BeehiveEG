@@ -3,27 +3,24 @@ import Introduction from "../../components/section-intro/intro.component";
 import {WhatPage} from './style'
 import Pragraph from "../../components/pragraph-section/pragraph-component";
 import pages from "../../configrations/pages";
-import axios from "axios";
+import { axios } from "../../axios";
 import './what.page.styles.scss'
 const What=()=>{
+
     const pageInfo = pages.what ;
     const [services, setServices] = useState([]);
     const [partners, setPartners] = useState([]);
+    const getServices = async ()=>{
+        const response = await axios.get('/services').catch((Error)=>console.log(Error))
+        if(response && response.data) setServices(response.data.data)
+    }
+    const getParteners = async ()=>{
+        const response = await axios.get('/partners').catch((Error)=>console.log(Error))
+        if(response && response.data) setPartners(response.data.data) ; 
+    }
     useEffect(()=>{
-        async function fetchData(){
-            await axios.get("jsons/API_semi.json").then(res =>{
-                setServices(res.data.services)
-            })
-        }
-        fetchData()
-    },[])
-    useEffect(()=>{
-        async function fetchData(){
-            await axios.get("jsons/API_semi.json").then(res =>{
-                setPartners(res.data.partners)
-            })
-        }
-        fetchData()
+        getServices()
+        getParteners()
     },[])
     return(
         <WhatPage bgColor={pageInfo.bgColor} className="what">
@@ -48,7 +45,6 @@ const What=()=>{
                     />
                     </div>
                 </div>
-                
             </section>
             <section  style={{padding:"5rem 0",backgroundColor:"#E7EEED",minHeight:"100vh"}}>
                 <div className="container">

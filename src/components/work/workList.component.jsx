@@ -36,8 +36,7 @@ export const WorkList = ({workList}) => {
             setAnimation({
                 rotate :velocity*100,
                 skew :velocity *50,
-    })
-            //console.log(velocity *  7.5);
+            })
             animationID = requestAnimationFrame(skewOnScroll)
         }    
         animationID =  requestAnimationFrame(skewOnScroll)
@@ -51,7 +50,7 @@ export const WorkList = ({workList}) => {
             <SectionTitle hoverWidth ="30"> Select Projects </SectionTitle>
             <UnorderedList style={{ transform: `skewY(${animation.skew}deg) rotateX(${animation.rotate}deg) `}} >
             { workList.map(item=>(
-                    <WorkItem  key={item.key}  title = {item.title} img = {item.img} link = {item.link} />
+                    <WorkItem  key={item.id}  title = {item.title} img = {item.photo} link = {item.id} />
                 ))}
             </UnorderedList>
         </>

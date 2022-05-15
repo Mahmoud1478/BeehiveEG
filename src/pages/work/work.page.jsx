@@ -1,9 +1,9 @@
-import React, {useRef,useEffect,useState} from "react";
+import React, {useEffect,useState} from "react";
 import Introduction from "../../components/section-intro/intro.component";
 import { WorkPage } from "./style";
 // import Pragraph from "../../components/pragraph-section/pragraph-component";
 import pages from "../../configrations/pages";
-import axios from "axios";
+import { axios } from "../../axios";
 // import { gsap} from "gsap"; 
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './work.page.styles.scss'
@@ -17,14 +17,12 @@ import WorkList from "../../components/work/workList.component";
 const Work = ()=>{
     const pageInfo = pages.Work
     const [projects, setProjects] = useState([]);
-    
+    const getProjects = async ()=>{
+        const response = await axios.get('/portfolio/front').catch((Error)=>console.log(Error))
+        if(response && response.data) setProjects(response.data.data) ; 
+    }
     useEffect(()=>{
-        const fetchData = async ()=>{
-            await axios.get("jsons/Api_semi.json").then(res =>{
-                setProjects(res.data.workItem)
-            })
-        }
-        fetchData()
+        getProjects()
     },[])
     return(
         <WorkPage bgColor={pageInfo.bgColor} className="work">

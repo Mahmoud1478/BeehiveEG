@@ -108,10 +108,12 @@ const Navbar = ()=>{
                 <nav>
                     <NavigationBarLg  className='test'>
                         <Link to="/"><img src='images/logo.png' alt= 'logo'/></Link>
-                        <MobileNavBtn />
+                        <MobileNavBtn onClick={()=>{
+                            console.log('clicked')
+                        }} />
                         <MobileMenu>
                             <MobileMenuList>
-                                
+                                {navLinks}
                             </MobileMenuList>
                             <MobileMenuFooter>
                                 <MobileMenuFooterTitle>GET IN TOUCH</MobileMenuFooterTitle>

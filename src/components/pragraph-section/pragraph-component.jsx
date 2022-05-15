@@ -3,16 +3,37 @@ import React, { Component ,createRef} from 'react'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import { Body, SmallBody ,PragraphHolder,} from './pragraph-component.style'
 import './pragraph-component.style.scss'
+
+
+export const Servces = ({title,titleColor,body,smallBody,bodyColor,smallBodyColor,servces}) =>{
+
+    return(
+        <div>
+            <SectionTitle hoverWidth='8' titleColor={titleColor}>title</SectionTitle>
+            <div className="service_container">
+                {
+                    servces.map((service)=>(
+                        <div key ={service.id} className="sevices">
+                            <h4>{service.title}</h4>
+                            {<ul className="sevice">
+                                {service.description.split(',').map((item)=>(
+                                    <li key = {item.id}>{item.name}</li>
+                                ))}
+                            </ul>}
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    );
+}
+
+
+
 class Pragraph extends Component{
     constructor(props){
         super(props)
         this.list = createRef()
-        
-    }
-    componentDidMount(){
-
-    }
-    componentWillUnmount(){
         
     }
     render(){
@@ -53,8 +74,8 @@ class Pragraph extends Component{
                         <div key ={service.id} className="sevices">
                             <h4>{service.title}</h4>
                             {<ul className="sevice">
-                                {service.items.map((item)=>(
-                                    <li key = {item.id}>{item.name}</li>
+                                {service.description.split(',').map((item,index)=>(
+                                    <li key = {index}>{item}</li>
                                 ))}
                             </ul>}
                         </div>
@@ -70,7 +91,7 @@ class Pragraph extends Component{
                                     <img src={partner.logo} alt="logo" className="logos_item" />
                                 </li>
                             ))
-                            }
+                            }  
                         </ul>
                     </div>
                 }

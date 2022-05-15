@@ -5,7 +5,7 @@ import { ProjectSectionTitle,ProjectSectionHolder ,ProjectSectionImgHolder,Proje
 const WorkItem = ({ title , img , link ,transform}) => {
     return (
         <ProjectSectionHolder>
-            <AnchorBlank  href={ link} >
+            <AnchorBlank  href={`work/${link}`} >
                 <ProjectSectionTitle style= {transform} >{title}</ProjectSectionTitle>
                 <ProjectSectionImgHolder>
                     <ProjectSectionImg src={img} alt="img" />
