@@ -20,9 +20,7 @@ import { Project } from './pages/project/Project'
 // import Animated from './pages/animated'
 
 const App = ()=>{
-    // const pagesColor = colors.pages
     const location = useLocation()
-    // const {currentRouteIndex} = useContext(RootContext)
     return(
         <div className="App">
             <Navbar/>
@@ -34,23 +32,6 @@ const App = ()=>{
                 <Route exact path="/work/latest" component={LatestWork}/>
                 <Route  path="/work/:id" component={Project}/>
             </SlideRoutes>
-            {/* <AnimatePresence  exitBeforeEnter= {true}  initial={false} >
-                <Routes location={location} key = {location.pathname}>
-                    <Route exact path="/" component={Intro} />
-                    <Route path="/who" component={Who}/>
-                    <Route path="/work" component={Work}/>
-                    <Route path="/what" component={What}/>
-                </Routes>
-                
-            </AnimatePresence> */}
-            {/* <div className="slider" style={{ display:'flex' }}>
-                <div className="stage">
-                    <div className="silder_item" style={{backgroundColor: pagesColor.intro}}></div>
-                    <div className="silder_item" style={{backgroundColor: pagesColor.who}}></div>
-                    <div className="silder_item" style={{backgroundColor: pagesColor.work}}></div>
-                    <div className="silder_item" style={{backgroundColor: pagesColor.what}}></div>
-                </div>
-            </div> */}
             <Footer/>
         </div>
     )

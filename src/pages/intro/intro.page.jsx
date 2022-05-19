@@ -13,12 +13,12 @@ const Intro = () => {
   const [animatedBgColor, setAnimatedBgColor] = useState("transparent");
   const [imagesClass, setImagesClass] = useState(null);
   const pageInfo = pages.intro;
-  const [projects, setProjects] = useState([[], []]);
+  const [projects, setProjects] = useState([]);
   const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: false });
   
   const getProjects = async ()=>{
     const response = await axios.get('/portfolio/intro').catch((Error)=>console.log(Error))
-    if(response && response.data) setProjects(response.data.data) ; 
+    if(response && response.data) setProjects(response.data.data); console.log(response.data.data);  
   }
   useEffect(() => {
     getProjects()

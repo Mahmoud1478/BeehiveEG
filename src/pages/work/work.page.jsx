@@ -18,7 +18,7 @@ const Work = ()=>{
     const pageInfo = pages.Work
     const [projects, setProjects] = useState([]);
     const getProjects = async ()=>{
-        const response = await axios.get('/portfolio/front').catch((Error)=>console.log(Error))
+        const response = await axios.get('/portfolio/latest').catch((Error)=>console.log(Error))
         if(response && response.data) setProjects(response.data.data) ; 
     }
     useEffect(()=>{

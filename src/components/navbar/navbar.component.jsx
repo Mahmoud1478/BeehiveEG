@@ -28,7 +28,7 @@ const Navbar = ()=>{
     }
     const navLinks = navitem.map((l,i)=>{
         return(
-            <li key ={l.id} className="nav_item" ref = {addRef} >
+            <li key ={l.id} className="nav_item"   ref = {addRef} >
                 <NavigationBtn exact={l.exact} to={l.href} onClick={(e)=>{
                 }}> {l.name}  </NavigationBtn>
             </li>
@@ -55,9 +55,10 @@ const Navbar = ()=>{
     useEffect(()=>{
         
         if(window.innerWidth > 768 ){
-            gsap.from(navElements.current ,{opacity:0 , y : -100 , ease:Power1.easeInOut ,duration:1 ,stagger:.2 } );
             gsap.from(contact.current ,{opacity:0 , y : -100 , ease:Power1.easeInOut ,duration:1 } ); 
-            
+        }
+        if (window.scrollY < 105 && window.innerWidth > 768 ){
+            gsap.from(navElements.current ,{opacity:0 , y : -100 , ease:Power1.easeInOut ,duration:1 ,stagger:.2 } );
         }
         
     },[])
@@ -82,6 +83,7 @@ const Navbar = ()=>{
                                 }
                             } 
                         );
+                        gsap.to('.nav_item',{opacity:0 ,  y : -100 , ease:Power1.easeInOut , stagger:.1,});
                     },
                     onEnterBack:()=>{
                         gsap.to(scrollToElement.current ,
@@ -96,6 +98,7 @@ const Navbar = ()=>{
                                 }
                             } 
                         );
+                        gsap.to('.nav_item' , {opacity:1 , y : 0 , ease:Power1.easeInOut ,stagger:.1,});
                     }
                 })
             }

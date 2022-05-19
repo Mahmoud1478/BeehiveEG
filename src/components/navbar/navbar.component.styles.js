@@ -11,10 +11,11 @@ export const HeaderSection = styled.header`
     background-color: transparent
 `
 export const NavigationBtn = styled(NavLink)`
+    padding:10px;
     text-transform: uppercase;
     text-decoration: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height:35px;
     font-size: 1.2rem;
@@ -188,5 +189,6 @@ export const MobileNavLink = styled(Link)`
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
+    
 
 `
