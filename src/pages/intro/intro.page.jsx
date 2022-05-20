@@ -8,6 +8,8 @@ import Pragraph from "../../components/pragraph-section/pragraph-component";
 import { axios } from "../../axios";
 import { useInView } from "react-hook-inview";
 import { Link } from "react-router-dom";
+
+import hero from './intro.png'
 const Intro = () => {
   const [animatRotate, setAnimatRotate] = useState("rotate(50deg)");
   const [animatedBgColor, setAnimatedBgColor] = useState("transparent");
@@ -18,7 +20,7 @@ const Intro = () => {
   
   const getProjects = async ()=>{
     const response = await axios.get('/portfolio/intro').catch((Error)=>console.log(Error))
-    if(response && response.data) setProjects(response.data.data); console.log(response.data.data);  
+    if(response && response.data) setProjects(response.data.data);  
   }
   useEffect(() => {
     getProjects()
@@ -39,7 +41,7 @@ const Intro = () => {
   return (
     <IntroPage bgColor={pageInfo.bgColor} className="intro">
       <Introduction
-        imgUrl={pageInfo.Text.imageUrl}
+        imgUrl={hero}
         heading={pageInfo.Text.heading}
         headingColor={pageInfo.Text.headingColor}
         btnColor={pageInfo.Text.btnColor}
@@ -71,7 +73,8 @@ const Intro = () => {
           <div className="holder">
             <div className="text">
               <h2>recent work</h2>
-              <Link ref={ref} to='work/latest' >veiw all work</Link>
+        
+              <Link ref={ref} >veiw all work</Link>
             </div>
           </div>
           <div className="images">

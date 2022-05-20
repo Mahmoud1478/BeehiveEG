@@ -1,16 +1,16 @@
 import React from 'react'
-import AnchorBlank from '../../Anchors/AnchorBlank'
+import { Link } from "react-router-dom";
 
 import { ProjectSectionTitle,ProjectSectionHolder ,ProjectSectionImgHolder,ProjectSectionImg} from './workItem.style'
 const WorkItem = ({ title , img , link ,transform}) => {
     return (
         <ProjectSectionHolder>
-            <AnchorBlank  href={`work/${link}`} >
+            <Link  to={`/work/${link}`} style={{ textDecoration :'none' }} >
                 <ProjectSectionTitle style= {transform} >{title}</ProjectSectionTitle>
                 <ProjectSectionImgHolder>
                     <ProjectSectionImg src={img} alt="img" />
                 </ProjectSectionImgHolder>
-            </AnchorBlank>
+            </Link>
         </ProjectSectionHolder>
     )
 }

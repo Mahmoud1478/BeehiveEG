@@ -3,7 +3,7 @@ import styled, {  } from 'styled-components'
 
 export const HeaderSection = styled.header`
     padding: 2rem 0;
-    color : ${props=> props.path==="/"?"black":"white"};
+    color : ${({white}) =>white};
     width:100%;
     position:fixed;
     top:0;
@@ -28,9 +28,12 @@ export const NavigationBtn = styled(NavLink)`
         position: absolute;
         left: 0;
         height: .25rem;
-        background-color:white;
+        background-color:${({white}) =>white};
         bottom:-1rem;
         display:inline-block;
+    }
+    &:hover{
+        color:inherit;
     }
     &:hover::after {
         width:100%;

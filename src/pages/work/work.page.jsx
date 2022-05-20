@@ -11,6 +11,7 @@ import { CenterColumn } from "../../components/stylesJs/globales.styles";
 import { Container } from "react-bootstrap";
 import WorkList from "../../components/work/workList.component";
 //gsap.registerPlugin(ScrollTrigger);
+import hero from './Work.png'
 
 
 
@@ -26,7 +27,7 @@ const Work = ()=>{
     },[])
     return(
         <WorkPage bgColor={pageInfo.bgColor} className="work">
-            <Introduction imgUrl={pageInfo.Text.imageUrl}
+            <Introduction imgUrl={hero}
                 heading ={pageInfo.Text.heading} 
                 headingColor={pageInfo.Text.headingColor} 
                 btnColor={pageInfo.Text.btnColor}

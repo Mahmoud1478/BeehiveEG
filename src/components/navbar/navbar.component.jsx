@@ -10,11 +10,15 @@ import{HeaderSection ,NavigationBarLg,NavBtn,NavigationBtn,Social,MobileMenuFoot
 import navItemsInfo from "../../configrations/navItemsinfo"
 import { gsap,Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import logo from './logo.png'
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 gsap.registerPlugin(ScrollTrigger);
 
 const navitem = navItemsInfo
 
 const Navbar = ()=>{
+    const [colorStatus, setColorStatus] = useState('white')
+    const location = useLocation()
     const navElements = useRef(null)
     const contact = useRef(null)
     const header = useRef(null)
@@ -29,7 +33,7 @@ const Navbar = ()=>{
     const navLinks = navitem.map((l,i)=>{
         return(
             <li key ={l.id} className="nav_item"   ref = {addRef} >
-                <NavigationBtn exact={l.exact} to={l.href} onClick={(e)=>{
+                <NavigationBtn exact={l.exact} to={l.href}  white={colorStatus} onClick={(e)=>{
                 }}> {l.name}  </NavigationBtn>
             </li>
         );
@@ -40,6 +44,9 @@ const Navbar = ()=>{
             behavior: 'smooth'
         })
     }
+    useEffect(()=>{
+        setColorStatus(['/what','/who','/work'].includes(location.pathname)? 'white' : 'black')
+    } , [location.pathname])
     useEffect(()=>{
         if(windowWidth < 768){
             scrollToElement.current.style.display = 'none'
@@ -106,11 +113,11 @@ const Navbar = ()=>{
     },[])
     window.addEventListener('resize',_=>setWindowWidth(window.innerWidth))
     return(
-        <HeaderSection className="header" path={window.location.pathname} ref={header}>
+        <HeaderSection className="header" white={colorStatus} ref={header}>
             <div className="container">
                 <nav>
                     <NavigationBarLg  className='test'>
-                        <Link to="/"><img src='images/logo.png' alt= 'logo'/></Link>
+                        <Link to="/"><img src={ logo} alt= 'logo'/></Link>
                         <MobileNavBtn onClick={()=>{
                             console.log('clicked')
                         }} />

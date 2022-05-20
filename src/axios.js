@@ -1,9 +1,5 @@
 import Axios from "axios";
 
 export const axios = Axios.create({
-    baseURL:'http://localhost:80/iceadmin_v2/api'
+    baseURL: process.env.REACT_APP_BASE_API_URL
 })
-
-// export const axios = Axios.create({
-//     baseURL:'https://admin.beehiveeg.com/api'
-// })

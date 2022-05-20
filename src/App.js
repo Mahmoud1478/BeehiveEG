@@ -10,10 +10,9 @@ import './App.css';
 import './app.scss';
 // import colors from './configrations/colors'
 import SlideRoutes from 'react-slide-routes'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import {AnimatePresence , } from "framer-motion";
 import { useLocation  } from 'react-router-dom'  
-import LatestWork from './pages/latestWork/LatestWork'
 import { Project } from './pages/project/Project'
 // import { useContext } from 'react'
 // import { RootContext } from './ContextApi/RootContext'
@@ -24,13 +23,12 @@ const App = ()=>{
     return(
         <div className="App">
             <Navbar/>
-            <SlideRoutes location={location} duration={500} timing="ease-out" pathList={["/","/who", "/work" , "/what",'/work/latest']}>
+            <SlideRoutes location={location} duration={500} timing="ease-out" pathList={["/","/who", "/work" , "/what"]}>
                 <Route exact path="/" component={Intro} />
-                <Route exact path="/who" component={Who}/>
+                <Route path="/who" component={Who}/>
                 <Route exact path="/work" component={Work}/>
-                <Route exact path="/what" component={What}/>
-                <Route exact path="/work/latest" component={LatestWork}/>
-                <Route  path="/work/:id" component={Project}/>
+                <Route path="/what" component={What}/>
+                <Route path="/work/:id" component={Project}/>
             </SlideRoutes>
             <Footer/>
         </div>
