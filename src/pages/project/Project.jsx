@@ -21,7 +21,7 @@ export const Project = () => {
         //     )
         // }
         // return (<li> {categories}</li>)
-        console.log(categories);
+        // console.log(categories);
     }
     useEffect(() => {
         getProject()

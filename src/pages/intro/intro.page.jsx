@@ -74,7 +74,7 @@ const Intro = () => {
             <div className="text">
               <h2>recent work</h2>
         
-              <Link ref={ref} >veiw all work</Link>
+              <Link ref={ref} to = '/'>veiw all work</Link>
             </div>
           </div>
           <div className="images">

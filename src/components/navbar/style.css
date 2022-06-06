@@ -80,3 +80,28 @@ header nav .nav-mobile .menu , .header nav  ,.header nav  .navbar, .header nav .
     font-size: 1.8rem;
 }
 
+.header nav .contact-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #eee;
+    min-width: 250px;
+    width: 650px;
+    min-height: max-content;
+    padding: 20px;
+    border-radius: 7px;
+}
+.header nav .contact-form form{
+    width: 100%;
+
+}
+.header nav .contact-form form input,.header nav .contact-form form button[type='submit']{
+    height: 35px;
+}
+.header nav .contact-form form input,.header nav .contact-form form button[type='submit'],.header nav .contact-form form textarea{
+    font-size: medium;
+}
+.header nav .contact-form form .form-text{
+    font-size: 14px;
+}
