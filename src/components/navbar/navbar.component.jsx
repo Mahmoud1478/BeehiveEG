@@ -20,6 +20,8 @@ import {
   MobileMenuFooterTitle,
   MobileMenuList,
   MobileNavBtn,
+  MobileMenuListItem,
+  MobileNavLink
 } from "./navbar.component.styles";
 import navItemsInfo from "../../configrations/navItemsinfo";
 import { gsap, Power1 } from "gsap";
@@ -34,6 +36,7 @@ const navitem = navItemsInfo;
 
 const Navbar = () => {
   const [colorStatus, setColorStatus] = useState("white");
+  const [mobileMenuStatus, setMobileMenuStatus] = useState(false);
   const [contactState ,setContactState] = useState(false)
   const [contactData ,setContactData] = useState({
     name : '',
@@ -175,6 +178,17 @@ const Navbar = () => {
       },
     });
   }, []);
+  const MobileLinks = navitem.map((l)=>{
+    return(
+        <MobileMenuListItem key ={l.id}>
+          <MobileNavLink to ={l.href} onClick = {()=>{
+            setMobileMenuStatus(false)
+          }}>
+            {l.name}
+          </MobileNavLink>
+        </MobileMenuListItem>
+    );
+})
   window.addEventListener("resize", (_) => setWindowWidth(window.innerWidth));
   return (
     <HeaderSection className="header" white={colorStatus} ref={header}>
@@ -184,13 +198,15 @@ const Navbar = () => {
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
-            <MobileNavBtn
-              onClick={() => {
-                console.log("clicked");
+            <MobileNavBtn className={`moblie_btn ${mobileMenuStatus ? 'active' : ''}`}
+              onClick={function(e){
+                setMobileMenuStatus((prev)=>{
+                  return ! prev
+                })
               }}
             />
-            <MobileMenu>
-              <MobileMenuList>{navLinks}</MobileMenuList>
+            <MobileMenu active = {mobileMenuStatus}>
+              <MobileMenuList>{MobileLinks}</MobileMenuList>
               <MobileMenuFooter>
                 <MobileMenuFooterTitle>GET IN TOUCH</MobileMenuFooterTitle>
                 <Social>

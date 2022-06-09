@@ -105,3 +105,13 @@ header nav .nav-mobile .menu , .header nav  ,.header nav  .navbar, .header nav .
 .header nav .contact-form form .form-text{
     font-size: 14px;
 }
+.moblie_btn.active::after , .moblie_btn.active::before{
+    top: 50% !important;
+    left: unset !important;
+}
+.moblie_btn.active::after{
+    transform:  rotate(-45deg);
+}
+.moblie_btn.active::before{
+    transform:  rotate(45deg);
+}
