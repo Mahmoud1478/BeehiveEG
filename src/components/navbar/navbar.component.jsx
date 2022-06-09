@@ -183,6 +183,10 @@ const Navbar = () => {
         <MobileMenuListItem key ={l.id}>
           <MobileNavLink to ={l.href} onClick = {()=>{
             setMobileMenuStatus(false)
+            window.scrollTo({
+              top:0,
+              behavior: 'smooth'
+          })
           }}>
             {l.name}
           </MobileNavLink>
