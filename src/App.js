@@ -1,4 +1,4 @@
-import{Route } from 'react-router-dom'
+import{Route} from 'react-router-dom'
 import Navbar from './components/navbar/navbar.component'
 import Footer from './components/footer/footer.component'
 import Intro from './pages/intro/intro.page'
